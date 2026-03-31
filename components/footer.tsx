@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Linkedin, Mail, ExternalLink } from "lucide-react"
+import { Linkedin, Mail, ExternalLink, Youtube, Instagram } from "lucide-react"
 import { SocialXIcon } from "@/components/social-x-icon"
 import {
   APPLY_FORM_URL,
@@ -10,6 +10,8 @@ import {
   LINKEDIN_URL,
   MEDIA_KIT_URL,
   X_URL,
+  YOUTUBE_URL,
+  INSTAGRAM_URL,
 } from "@/lib/site"
 
 const mailto = `mailto:${CONTACT_EMAIL}`
@@ -19,6 +21,7 @@ const footerLinks = {
     { label: "Home", href: "/#hero" },
     { label: "About OSEN", href: "/#about" },
     { label: "Events", href: "/#events" },
+    { label: "Products", href: "/#products" },
     { label: "Get Support", href: "/get-support" },
     { label: "Partnerships", href: "/partnerships" },
   ],
@@ -31,6 +34,8 @@ const footerLinks = {
   Community: [
     { label: "LinkedIn", href: LINKEDIN_URL },
     { label: "X", href: X_URL },
+    { label: "YouTube", href: YOUTUBE_URL },
+    { label: "Instagram", href: INSTAGRAM_URL },
     { label: "Email", href: mailto },
   ],
 }
@@ -66,6 +71,8 @@ export function Footer() {
               {[
                 { Icon: Linkedin, href: LINKEDIN_URL, label: "LinkedIn" },
                 { Icon: SocialXIcon, href: X_URL, label: "X" },
+                { Icon: Youtube, href: YOUTUBE_URL, label: "YouTube" },
+                { Icon: Instagram, href: INSTAGRAM_URL, label: "Instagram" },
                 { Icon: Mail, href: mailto, label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a

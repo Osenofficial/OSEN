@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { SITE_URL, LINKEDIN_URL, X_URL } from "@/lib/site"
+import { SITE_URL, LINKEDIN_URL, X_URL, YOUTUBE_URL, INSTAGRAM_URL } from "@/lib/site"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -45,7 +45,7 @@ const jsonLd = {
   name: "OSEN",
   url: SITE_URL,
   description,
-  sameAs: [LINKEDIN_URL, X_URL],
+  sameAs: [LINKEDIN_URL, X_URL, YOUTUBE_URL, INSTAGRAM_URL],
 }
 
 export default function RootLayout({

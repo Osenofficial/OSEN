@@ -6,6 +6,8 @@ export const MEDIA_KIT_URL =
 
 export const LINKEDIN_URL = "https://www.linkedin.com/company/osenofficial/"
 export const X_URL = "https://x.com/osenofficial"
+export const YOUTUBE_URL = "https://www.youtube.com/@osenofficiall"
+export const INSTAGRAM_URL = "https://www.instagram.com/osenofficial/"
 
 export const APPLY_FORM_URL = "https://forms.gle/GhwdTVQEWfK28t3h7"
 

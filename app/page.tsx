@@ -5,6 +5,7 @@ import { WhyPartner } from "@/components/why-partner"
 import { ImpactStats } from "@/components/impact-stats"
 import { CompanyCollaboration } from "@/components/company-collaboration"
 import { FeaturedEvents } from "@/components/featured-events"
+import { OsenProducts } from "@/components/osen-products"
 import { Testimonials } from "@/components/testimonials"
 import { HowToPartner } from "@/components/how-to-partner"
 import { Footer } from "@/components/footer"
@@ -19,6 +20,7 @@ export default function PartnershipsPage() {
       <ImpactStats />
       <CompanyCollaboration />
       <FeaturedEvents />
+      <OsenProducts />
       <Testimonials />
       <HowToPartner />
       <Footer />
