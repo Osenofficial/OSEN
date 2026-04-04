@@ -2,19 +2,28 @@ import type { Metadata } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SITE_URL, LINKEDIN_URL, X_URL, YOUTUBE_URL, INSTAGRAM_URL } from "@/lib/site"
+import { HashToPathRedirect } from "@/components/hash-to-path-redirect"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" })
 
-const title = "Partner with OSEN | Hackathons, Workshops & Dev Communities in India"
+const title = "OSEN | Hackathon Support & Student Tech Events in India"
 const description =
-  "OSEN helps colleges, student clubs, and tech communities across India run world-class hackathons, workshops, and developer meetups. Become a partner today."
+  "OSEN supports hackathons, workshops & dev meetups across India with swags, sponsorship, mentors, and promotion. Apply for event support and grow your college tech community."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title,
   description,
+  keywords: [
+    "OSEN",
+    "hackathon India",
+    "student tech events",
+    "college hackathon support",
+    "developer meetup sponsorship",
+    "student community",
+  ],
   icons: {
     icon: [
       { url: "/osenonlywhitebg.png?v=1", type: "image/png", sizes: "32x32" },
@@ -63,6 +72,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <HashToPathRedirect />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
