@@ -4,12 +4,12 @@ import { HowToPartner } from "@/components/how-to-partner"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Get Support for Your Event | OSEN",
+  title: "Event Support | OSEN",
   description:
     "Request support for your hackathon, workshop, or developer meetup — swag, speakers, mentorship, and reach across India.",
 }
 
-export default function GetSupportPage() {
+export default function SupportPage() {
   return (
     <main id="main-content" className="min-h-screen bg-[#050E1A]">
       <Navbar />
@@ -20,7 +20,7 @@ export default function GetSupportPage() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-balance mb-4"
             style={{ fontFamily: "var(--font-space-grotesk, sans-serif)" }}
           >
-            Get Support for Your <span className="text-gradient-purple">Hackathon or Meetup</span>
+            Event support for your <span className="text-gradient-purple">hackathon or meetup</span>
           </h1>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
             Tell us about your event — swag, speakers, mentorship, sponsorships, and reach. We&apos;ll help you ship
