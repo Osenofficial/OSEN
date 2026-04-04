@@ -56,19 +56,20 @@ export function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto mb-10 text-pretty">
-          Whether you&apos;re a college, student club, or tech community organizing an event — or a company wanting to
-          reach talented student developers — OSEN helps you create high-impact hackathons, workshops, and dev meetups.
+          We help colleges, student clubs, and communities run successful hackathons and tech events with swags,
+          sponsorship, mentors, promotion &amp; execution support. Companies partner with OSEN to reach talented student
+          builders across India.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             asChild
             size="lg"
-            className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-semibold px-8 py-3 text-base rounded-xl shadow-xl shadow-[#7C3AED]/30 hover:shadow-[#7C3AED]/50 transition-all duration-200 hover:-translate-y-0.5 group glow-purple w-full sm:w-auto"
+            className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold px-10 py-6 text-lg rounded-xl shadow-xl shadow-[#7C3AED]/35 hover:shadow-[#7C3AED]/55 transition-all duration-200 hover:-translate-y-0.5 group glow-purple w-full sm:w-auto min-h-[52px]"
           >
-            <Link href="/get-support">
+            <Link href="/support">
               Get Support for Your Event
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
 
