@@ -1,14 +1,38 @@
 "use client"
 
-import { ExternalLink } from "lucide-react"
+type FeaturedEvent = {
+  name: string
+  type: string
+  description: string
+  color: string
+  location: string
+  date?: string
+}
 
-const events = [
+const events: FeaturedEvent[] = [
+  {
+    name: "Hack Forge",
+    type: "Support Partner",
+    description: "High-intensity build sprint with mentorship and community shout-outs across OSEN channels.",
+    color: "#7C3AED",
+    location: "India",
+    date: "March 2026",
+  },
+  {
+    name: "Vibecode",
+    type: "Community Partner",
+    description: "Vibe-led coding fest blending creativity, product, and rapid prototyping for student builders.",
+    color: "#00F0FF",
+    location: "India",
+    date: "March 2026",
+  },
   {
     name: "HackTU 7.0",
     type: "Session + Support",
     description: "Premier hackathon at Thapar University with 500+ participants and live mentorship.",
     color: "#7C3AED",
     location: "Thapar University",
+    date: "2025–26 season",
   },
   {
     name: "XENOTHON 2026",
@@ -16,6 +40,7 @@ const events = [
     description: "High-energy tech fest hackathon at CGC University, Mohali with web3 and AI challenges.",
     color: "#00F0FF",
     location: "CGC University, Mohali",
+    date: "2026",
   },
   {
     name: "Hack-N-Win 3.0",
@@ -109,6 +134,9 @@ export function FeaturedEvents() {
               </span>
 
               <h3 className="text-base font-bold text-white mb-1.5">{event.name}</h3>
+              {event.date ? (
+                <p className="text-xs text-[#00F0FF]/75 mb-1 font-medium">{event.date}</p>
+              ) : null}
               <p className="text-xs text-slate-500 mb-3">{event.location}</p>
               <p className="text-xs text-slate-400 leading-relaxed">{event.description}</p>
             </div>
