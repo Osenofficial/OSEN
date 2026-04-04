@@ -8,6 +8,7 @@ import { FeaturedEvents } from "@/components/featured-events"
 import { OsenProducts } from "@/components/osen-products"
 import { Testimonials } from "@/components/testimonials"
 import { HowToPartner } from "@/components/how-to-partner"
+import { OrganizerFaq } from "@/components/organizer-faq"
 import { Footer } from "@/components/footer"
 
 export default function PartnershipsPage() {
@@ -23,6 +24,7 @@ export default function PartnershipsPage() {
       <OsenProducts />
       <Testimonials />
       <HowToPartner />
+      <OrganizerFaq />
       <Footer />
     </main>
   )
