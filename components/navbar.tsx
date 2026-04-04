@@ -9,12 +9,13 @@ import { cn } from "@/lib/utils"
 import { APPLY_FORM_URL } from "@/lib/site"
 
 const navLinks = [
-  { label: "Home", href: "/#hero" },
-  { label: "About", href: "/#about" },
-  { label: "Events", href: "/#events" },
-  { label: "Products", href: "/#products" },
-  { label: "Get Support", href: "/get-support" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Events", href: "/events" },
+  { label: "Products", href: "/products" },
+  { label: "Support", href: "/support" },
   { label: "Partnerships", href: "/partnerships" },
+  { label: "FAQ", href: "/faq" },
 ] as const
 
 export function Navbar() {
@@ -46,7 +47,7 @@ export function Navbar() {
           >
             <Image
               src="/OSEN.png"
-              alt=""
+              alt="OSEN — student tech community partner"
               width={160}
               height={32}
               className="h-8 w-auto max-h-8 object-contain object-left"

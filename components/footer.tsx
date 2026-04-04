@@ -18,11 +18,12 @@ const mailto = `mailto:${CONTACT_EMAIL}`
 
 const footerLinks = {
   "Quick Links": [
-    { label: "Home", href: "/#hero" },
-    { label: "About OSEN", href: "/#about" },
-    { label: "Events", href: "/#events" },
-    { label: "Products", href: "/#products" },
-    { label: "Get Support", href: "/get-support" },
+    { label: "Home", href: "/" },
+    { label: "About OSEN", href: "/about" },
+    { label: "Events", href: "/events" },
+    { label: "Products", href: "/products" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Support", href: "/support" },
     { label: "Partnerships", href: "/partnerships" },
   ],
   Partnership: [
@@ -55,7 +56,7 @@ export function Footer() {
             >
               <Image
                 src="/OSEN.png"
-                alt=""
+                alt="OSEN — student tech community partner"
                 width={180}
                 height={40}
                 className="h-9 w-auto max-h-9 object-contain object-left"
