@@ -42,7 +42,9 @@ export function OsenProducts() {
             What we&apos;re <span className="text-gradient-purple">building next</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Upcoming OSEN initiatives — crafted for hackers, communities, and long-term impact.
+            <strong className="font-semibold text-slate-300">HACKCOMET</strong> and{" "}
+            <strong className="font-semibold text-slate-300">OSENCHAIN</strong> are internal OSEN product initiatives in
+            active development — we&apos;ll share specifics and timelines as we get closer to launch.
           </p>
         </div>
 
