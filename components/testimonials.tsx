@@ -45,6 +45,22 @@ const testimonials = [
     initials: "HX",
     color: "#7C3AED",
   },
+  {
+    quote:
+      "Hack Forge felt elevated with OSEN in our corner — clear communication, solid promotion, and students still talk about the experience.",
+    author: "Organizing Team",
+    org: "Hack Forge",
+    initials: "HF",
+    color: "#00F0FF",
+  },
+  {
+    quote:
+      "Vibecode needed a partner who gets student energy. OSEN brought structure without killing the vibe — exactly what we needed.",
+    author: "Fest Lead",
+    org: "Vibecode",
+    initials: "VB",
+    color: "#7C3AED",
+  },
 ]
 
 export function Testimonials() {
