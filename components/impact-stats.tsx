@@ -1,13 +1,12 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import { Calendar, Users, UsersRound } from "lucide-react"
 
 const stats = [
   {
     value: 60,
     suffix: "+",
-    label: "Support Events",
+    label: "Events Supported",
     icon: Calendar,
     color: "#7C3AED",
   },
@@ -25,47 +24,7 @@ const stats = [
     icon: UsersRound,
     color: "#7C3AED",
   },
-]
-
-function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(0)
-  const [started, setStarted] = useState(false)
-  const ref = useRef<HTMLSpanElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started) {
-          setStarted(true)
-        }
-      },
-      { threshold: 0.3 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [started])
-
-  useEffect(() => {
-    if (!started) return
-    const duration = 1800
-    const steps = 60
-    const increment = target / steps
-    let current = 0
-    const timer = setInterval(() => {
-      current = Math.min(current + increment, target)
-      setCount(Math.floor(current))
-      if (current >= target) clearInterval(timer)
-    }, duration / steps)
-    return () => clearInterval(timer)
-  }, [started, target])
-
-  return (
-    <span ref={ref}>
-      {count.toLocaleString()}
-      {suffix}
-    </span>
-  )
-}
+] as const
 
 export function ImpactStats() {
   return (
@@ -123,7 +82,10 @@ export function ImpactStats() {
                   backgroundClip: "text",
                 }}
               >
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                <span>
+                  {stat.value.toLocaleString()}
+                  {stat.suffix}
+                </span>
               </div>
 
               {/* Label */}
