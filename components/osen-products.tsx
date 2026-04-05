@@ -1,7 +1,8 @@
 "use client"
 
-import { Rocket, Link2, Sparkles } from "lucide-react"
+import { Rocket, Link2 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { INSTAGRAM_URL, LINKEDIN_URL } from "@/lib/site"
 
 const products = [
   {
@@ -9,14 +10,12 @@ const products = [
     tagline: "Where hackathon stories turn into real momentum for builders.",
     icon: Rocket,
     accent: "#7C3AED",
-    glow: "shadow-[#7C3AED]/20",
   },
   {
     name: "OSENCHAIN",
     tagline: "The on-chain layer connecting communities, events, and the next wave of OSEN programs.",
     icon: Link2,
     accent: "#00F0FF",
-    glow: "shadow-[#00F0FF]/15",
   },
 ] as const
 
@@ -30,79 +29,79 @@ export function OsenProducts() {
       <div className="absolute bottom-1/4 left-0 w-[380px] h-[380px] rounded-full bg-[#7C3AED]/6 blur-[100px] pointer-events-none" />
       <div className="absolute top-1/3 right-0 w-[320px] h-[320px] rounded-full bg-[#00F0FF]/5 blur-[90px] pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#7C3AED]/30 bg-[#7C3AED]/10 text-[#7C3AED] text-xs font-semibold uppercase tracking-widest mb-5">
-            OSEN Products
-          </div>
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7C3AED] mb-3">OSEN roadmap</p>
           <h2
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-balance mb-4"
             style={{ fontFamily: "var(--font-space-grotesk, sans-serif)" }}
           >
-            What we&apos;re <span className="text-gradient-purple">building next</span>
+            Coming <span className="text-gradient-purple">soon</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            <strong className="font-semibold text-slate-300">HACKCOMET</strong> and{" "}
-            <strong className="font-semibold text-slate-300">OSENCHAIN</strong> are internal OSEN product initiatives in
-            active development — we&apos;ll share specifics and timelines as we get closer to launch.
+            Two product initiatives are in development — not live yet. We&apos;ll share timelines and early access when
+            they&apos;re ready.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {products.map((product) => (
-            <article
-              key={product.name}
-              className={cn(
-                "group relative flex flex-col rounded-2xl border p-8 sm:p-10 transition-all duration-300",
-                "bg-[#0A2540]/40 hover:bg-[#0A2540]/70 border-[#7C3AED]/20 hover:border-[#7C3AED]/45",
-                "hover:-translate-y-1 hover:shadow-xl",
-                product.glow
-              )}
-            >
+        <div
+          className={cn(
+            "rounded-2xl border border-dashed border-[#7C3AED]/35 bg-[#0A2540]/25",
+            "px-5 py-8 sm:px-8 sm:py-10 backdrop-blur-sm"
+          )}
+        >
+          <p className="text-center text-sm font-medium text-slate-300 mb-8 max-w-lg mx-auto">
+            Teasers for what we&apos;re building — names and direction only until launch.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {products.map((product) => (
               <div
-                className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none"
-                style={{
-                  background: `radial-gradient(600px circle at 50% 0%, ${product.accent}12, transparent 55%)`,
-                }}
-              />
-
-              <div className="relative flex items-start justify-between gap-4 mb-6">
-                <div
-                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border"
-                  style={{
-                    backgroundColor: `${product.accent}14`,
-                    borderColor: `${product.accent}35`,
-                  }}
-                >
-                  <product.icon className="h-7 w-7" style={{ color: product.accent }} aria-hidden />
-                </div>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#00F0FF]/25 bg-[#00F0FF]/8 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[#00F0FF]">
-                  <Sparkles className="h-3.5 w-3.5 shrink-0" aria-hidden />
-                  Launching soon
-                </span>
-              </div>
-
-              <h3
-                className="relative text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3"
-                style={{ fontFamily: "var(--font-space-grotesk, sans-serif)" }}
+                key={product.name}
+                className="rounded-xl border border-[#7C3AED]/15 bg-[#050E1A]/60 p-6 sm:p-7 text-left"
               >
-                <span style={{ color: product.accent }}>{product.name}</span>
-              </h3>
-              <p className="relative text-sm sm:text-base text-slate-400 leading-relaxed flex-1">
-                {product.tagline}
-              </p>
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border"
+                    style={{
+                      backgroundColor: `${product.accent}12`,
+                      borderColor: `${product.accent}28`,
+                    }}
+                  >
+                    <product.icon className="h-5 w-5" style={{ color: product.accent }} aria-hidden />
+                  </div>
+                  <h3
+                    className="text-lg sm:text-xl font-bold tracking-tight text-white"
+                    style={{ fontFamily: "var(--font-space-grotesk, sans-serif)" }}
+                  >
+                    <span style={{ color: product.accent }}>{product.name}</span>
+                  </h3>
+                </div>
+                <p className="text-sm text-slate-400 leading-relaxed">{product.tagline}</p>
+              </div>
+            ))}
+          </div>
 
-              <div
-                className="relative mt-8 h-px w-full bg-gradient-to-r from-transparent opacity-60"
-                style={{
-                  backgroundImage: `linear-gradient(90deg, transparent, ${product.accent}55, transparent)`,
-                }}
-              />
-              <p className="relative mt-4 text-xs text-slate-500">
-                Details and early access will be announced across OSEN channels.
-              </p>
-            </article>
-          ))}
+          <p className="mt-8 pt-8 border-t border-[#7C3AED]/15 text-center text-sm text-slate-500">
+            Updates:{" "}
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#00F0FF]/90 hover:text-[#00F0FF] underline underline-offset-2"
+            >
+              LinkedIn
+            </a>{" "}
+            ·{" "}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#00F0FF]/90 hover:text-[#00F0FF] underline underline-offset-2"
+            >
+              Instagram
+            </a>
+          </p>
         </div>
       </div>
     </section>
